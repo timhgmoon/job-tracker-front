@@ -5,5 +5,15 @@ Job Tracker Front
 Front-end side of application which will allow users to sign-in/sign-up and show job application status(interested, applied, interviewing, accepted, rejected).
 
 ## Wireframes
-![Landing Page Wireframe](./wireframes/landing-page-wireframe.png)
-![Logged In Wireframe](./wireframes/logged-in-wireframe.png)
+<figure>
+  <img
+  src="./wireframes/landing-page-wireframe.png"
+  alt="Landing Page Wireframe">
+  <figcaption>Landing Page Wireframe</figcaption>
+</figure>
+<figure>
+  <img
+  src="./wireframes/logged-in-wireframe.png"
+  alt="Logged In Wireframe">
+  <figcaption>Logged In Wireframe</figcaption>
+</figure>
