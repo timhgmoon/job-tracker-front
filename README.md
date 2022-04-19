@@ -11,9 +11,13 @@ Front-end side of application which will allow users to sign-in/sign-up and show
   alt="Landing Page Wireframe">
   <figcaption>Landing Page Wireframe</figcaption>
 </figure>
+
+---
 <figure>
   <img
   src="./wireframes/logged-in-wireframe.png"
   alt="Logged In Wireframe">
   <figcaption>Logged In Wireframe</figcaption>
 </figure>
+
+---
