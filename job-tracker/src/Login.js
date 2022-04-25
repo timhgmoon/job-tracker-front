@@ -8,18 +8,7 @@ import KeyIcon from '@mui/icons-material/Key';
 import TextField from '@mui/material/TextField';
 
 const axios = require('axios');
-// axios.post('https://personal-job-tracker-api.herokuapp.com/sign-in/', {
-//   "user": {
-//   "email": "tim@gmail.com",
-//   "password": "Tim1507025"
-//   }
-// })
-// .then(function(res) {
-//   console.log(res);
-// })
-// .catch(function (error) {
-//   console.log(error);
-// });
+
 const Login= () => {
   const [user, setUser] = useState({username: '', password: ''})
 
@@ -28,12 +17,29 @@ const Login= () => {
     const target = event.target
     const name = target.name
     setUser({
+      ...user,
       [name]: target.value
     })
   }
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    axios.post('https://personal-job-tracker-api.herokuapp.com/sign-in/', {
+      "user": {
+      "email": user.username,
+      "password": user.password
+      }
+    })
+    .then(function(res) {
+      console.log(res);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  }
   return (
      <Container maxWidth>
-      <Box component="form">
+      <Box component="form" onSubmit={handleSubmit}>
         <FormControl variant="standard">
         <Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
           <AccountCircle sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
@@ -43,7 +49,7 @@ const Login= () => {
           <KeyIcon sx={{ color: 'action.active', mr: 1, my: 0.5 }} />
           <TextField value={user.password} onChange={handleInput} name="password" variant="standard" />
         </Box>
-        <Button sx={{mt: 2}}variant="outlined">Log In</Button>
+        <Button sx={{mt: 2}} type="submit" variant="contained">Log In</Button>
         </FormControl>
       </Box>
      </Container>
