@@ -17,7 +17,7 @@ import Button from '@mui/material/Button';
 function App() {
 
   const [token, setToken] = useState('');
-  
+
   return (
     <div className="App">
       <h1>Hello
@@ -25,7 +25,7 @@ function App() {
       </h1>
       <Navigation></Navigation>
       <Routes>
-        <Route path="/sign-in" element={<Login />} />
+        <Route path="/sign-in" element={<Login setToken={setToken} />} />
         <Route path="/sign-up" element={<Signup />} />
         <Route path="/logged-in" element={<Homepage />} />
         <Route exact path="/" element={<LandingPage />} />

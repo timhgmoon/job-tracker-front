@@ -9,7 +9,7 @@ import TextField from '@mui/material/TextField';
 
 const axios = require('axios');
 
-const Login= () => {
+const Login= (props) => {
   const [user, setUser] = useState({username: '', password: ''})
 
   const handleInput = (event) => {
@@ -21,7 +21,6 @@ const Login= () => {
       [name]: target.value
     })
   }
-
   const handleSubmit = (event) => {
     event.preventDefault()
     axios.post('https://personal-job-tracker-api.herokuapp.com/sign-in/', {
@@ -31,7 +30,7 @@ const Login= () => {
       }
     })
     .then(function(res) {
-      console.log(res);
+      localStorage.setItem("token", res.data.user.token)
     })
     .catch(function (error) {
       console.log(error);
