@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   Routes,
   Route,
@@ -13,9 +13,16 @@ import Signup from './Signup';
 import Navigation from './Navigation';
 import Button from '@mui/material/Button';
 
+
 function App() {
+
+  const [token, setToken] = useState('');
+  
   return (
     <div className="App">
+      <h1>Hello
+        
+      </h1>
       <Navigation></Navigation>
       <Routes>
         <Route path="/sign-in" element={<Login />} />
