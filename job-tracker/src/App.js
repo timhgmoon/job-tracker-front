@@ -17,17 +17,16 @@ import Button from '@mui/material/Button';
 function App() {
 
   const [token, setToken] = useState('');
-
+  useEffect(() => {
+    localStorage.setItem("token", token)
+  }, [token])
   return (
     <div className="App">
-      <h1>Hello
-        
-      </h1>
       <Navigation></Navigation>
       <Routes>
         <Route path="/sign-in" element={<Login setToken={setToken} />} />
         <Route path="/sign-up" element={<Signup />} />
-        <Route path="/logged-in" element={<Homepage />} />
+        <Route path="/home" element={<Homepage />} />
         <Route exact path="/" element={<LandingPage />} />
       </Routes>
     </div>

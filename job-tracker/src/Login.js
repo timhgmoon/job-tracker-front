@@ -30,7 +30,8 @@ const Login= (props) => {
       }
     })
     .then(function(res) {
-      localStorage.setItem("token", res.data.user.token)
+      // localStorage.setItem("token", res.data.user.token)
+      props.setToken(res.data.user.token)
     })
     .catch(function (error) {
       console.log(error);
