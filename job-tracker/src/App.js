@@ -15,11 +15,7 @@ import Button from '@mui/material/Button';
 
 
 function App() {
-
-  const [token, setToken] = useState('');
-  useEffect(() => {
-    localStorage.setItem("token", token)
-  }, [token])
+  const [token, setToken] = useState(localStorage.getItem('token'));
   return (
     <div className="App">
       <Navigation></Navigation>
