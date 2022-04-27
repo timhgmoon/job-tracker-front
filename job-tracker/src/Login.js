@@ -7,7 +7,7 @@ import FormControl from '@mui/material/FormControl';
 import KeyIcon from '@mui/icons-material/Key';
 import TextField from '@mui/material/TextField';
 
-const axios = require('axios');
+const axios = require('axios')
 
 const Login= (props) => {
   const [user, setUser] = useState({username: '', password: ''})

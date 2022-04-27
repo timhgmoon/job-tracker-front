@@ -7,8 +7,8 @@ const LandingPage = () => {
   return (
     <>
     <Grid 
-      container 
       spacing={2}
+      container
       direction="column"
       alignItems="center"
       sx={{
@@ -19,7 +19,7 @@ const LandingPage = () => {
         <Item>Welcome to Job Tracker</Item>
       </Grid>
       <Grid item xs={12}>
-        <Item centered>Make your life easier tracking previous/current job applications!</Item>
+        <Item centered="true">Make your life easier tracking previous/current job applications!</Item>
       </Grid>
     </Grid>
     <Grid 

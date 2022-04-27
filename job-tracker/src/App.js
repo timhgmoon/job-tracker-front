@@ -26,7 +26,7 @@ function App() {
       <Routes>
         <Route path="/sign-in" element={<Login setToken={setToken} />} />
         <Route path="/sign-up" element={<Signup />} />
-        <Route path="/home" element={<Homepage />} />
+        <Route path="/homepage" element={<Homepage token={token} />} />
         <Route exact path="/" element={<LandingPage />} />
       </Routes>
     </div>
